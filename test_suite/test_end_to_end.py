@@ -44,17 +44,17 @@ class TestEndToEnd(StartEnd):
             converterTo.click()
             assert 'Список валют "в" не открывается'
 
-        # выбираем GBP
+            # выбираем GBP
             gbp = converter.find("//select[@name='converterTo']/../div/div/span[text()='GBP']")
             gbp.click()
             assert 'Не удалось выбрать валюту (GBP)'
 
-        # в блоке "Источник" выбираем "Наличные"
+            # в блоке "Источник" выбираем "Наличные"
             source = converter.find(converter.cash)
             source.click()
             assert 'Не удалось выбрать "Источник" - "Наличные"'
 
-        # в блоке "Получение" выбираем "Выбрать наличные"
+            # в блоке "Получение" выбираем "Выбрать наличные"
             destination = converter.find(converter.choose_cash)
             destination.click()
             assert 'Не удалось выбрать "Получение" - "Выбрать наличные"'
@@ -64,7 +64,7 @@ class TestEndToEnd(StartEnd):
             button = converter.find(converter.show_button)
             button.click()
 
-        # ждем, когда появится блок с результатом
+            # ждем, когда появится блок с результатом
             try:
                 WebDriverWait(self.driver, 10).until(
                     ec.text_to_be_present_in_element((By.XPATH, converter.result_to), '0,82'))
