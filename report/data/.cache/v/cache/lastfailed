@@ -1,0 +1,6 @@
+{
+  "::TestConverter::()::test_converter[param_test0]": true,
+  "::TestCurrency::()::test_to_currency[param_test0]": true,
+  "::TestEndToEnd::()::test_end_to_end": true,
+  "::TestFromCurrency::()::test_from_currency[param_test0]": true
+}
