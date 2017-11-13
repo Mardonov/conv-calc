@@ -7,6 +7,8 @@
 
 Окружение проекта:
 
+python 3.6
+
 chromedriver-installer==0.0.6
 
 pytest==2.9.0
