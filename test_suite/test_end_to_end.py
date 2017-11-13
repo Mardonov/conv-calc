@@ -67,7 +67,7 @@ class TestEndToEnd(StartEnd):
             # ждем, когда появится блок с результатом
             try:
                 WebDriverWait(self.driver, 10).until(
-                    ec.text_to_be_present_in_element((By.XPATH, converter.result_to), '0,82'))
+                    ec.text_to_be_present_in_element((By.XPATH, converter.result_to), '0,83'))
             except TimeoutException:
                 raise Exception('Значение не получено')
 

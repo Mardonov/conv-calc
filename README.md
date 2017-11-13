@@ -1,21 +1,16 @@
 Автоматизация тестирования Калькулятора иностранных валют
 
+Для запуска автотестов:
+1) Активируйте virtualenv.
+2) py.test --alluredir \[path_to_report_dir\]
+3) allure generate directory-with-results/
+
 Окружение проекта:
 
-colorama==0.3.9
-
-enum34==1.1.6
-
-lxml==4.1.1
-
-namedlist==1.7
-
-py==1.4.34
+chromedriver-installer==0.0.6
 
 pytest==2.9.0
 
 pytest-allure-adaptor==1.7.9
 
 selenium==3.7.0
-
-six==1.11.0

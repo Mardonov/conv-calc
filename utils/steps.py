@@ -51,6 +51,7 @@ class Converter(Driver):
 
     # ввод суммы и конвертация
     @pytest.fixture()
+    @pytest.allure.step('Ввод суммы и конвертация')
     def converter_func(self, input, output):
 
         with pytest.allure.step('Ввод новых данных в поле "Сумма"'):
@@ -85,6 +86,7 @@ class Converter(Driver):
             raise Exception('Значение не получено')
 
     # проверить список валют "из"
+    @pytest.allure.step('Проверяет список валют - "из"')
     def from_currency_func(self, data):
         xpath2 = "//select[@name='converterFrom']/..//span[contains(text()," + " '" + data + "'" + ")]"
 
@@ -99,6 +101,7 @@ class Converter(Driver):
             return currency.text
 
     # Проверить список валют "в"
+    @pytest.allure.step('Проверяет список валют - "в"')
     def to_currency_func(self, data):
         xpath2 = "//select[@name='converterTo']/..//span[contains(text()," + " '" + data + "'" + ")]"
 
